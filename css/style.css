@@ -29,7 +29,14 @@ li {
 
 ul li:hover {
     cursor: pointer;
+}
+
+.white:hover {
     box-shadow: inset 0 0 5px 0 orange;
+}
+
+.black:hover {
+    box-shadow: inset 0 0 5px 0 #87cefa;
 }
 
 ul .white {
