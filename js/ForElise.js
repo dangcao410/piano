@@ -4,258 +4,343 @@ document.getElementById('test').addEventListener('click', (event) => {
 
     setTimeout(() => {
         document.getElementById('ds5').click();
+        document.getElementById('ds5').classList.add("active");
 
         setTimeout(() => {
             document.getElementById('e5').click();
+            document.getElementById('e5').classList.add("active");
 
             setTimeout(() => {
                 document.getElementById('ds5').click();
+                document.getElementById('ds5').classList.add("active");
 
                 setTimeout(() => {
                     document.getElementById('e5').click();
+                    document.getElementById('e5').classList.add("active");
 
                     setTimeout(() => {
                         document.getElementById('b4').click();
+                        document.getElementById('b4').classList.add("active");
 
                         setTimeout(() => {
                             document.getElementById('d5').click();
+                            document.getElementById('d5').classList.add("active");
 
                             setTimeout(() => {
                                 document.getElementById('c5').click();
+                                document.getElementById('c5').classList.add("active");
 
                                 setTimeout(() => {
                                     document.getElementById('a4').click();
+                                    document.getElementById('a4').classList.add("active");
 
                                     setTimeout(() => {
                                         document.getElementById('c4').click();
+                                        document.getElementById('c4').classList.add("active");
 
                                         setTimeout(() => {
                                             document.getElementById('e4').click();
+                                            document.getElementById('e4').classList.add("active");
 
                                             setTimeout(() => {
                                                 document.getElementById('a4').click();
+                                                document.getElementById('a4').classList.add("active");
 
                                                 setTimeout(() => {
                                                     document.getElementById('b4').click();
+                                                    document.getElementById('b4').classList.add("active");
 
                                                     setTimeout(() => {
                                                         document.getElementById('e4').click();
+                                                        document.getElementById('e4').classList.add("active");
 
                                                         setTimeout(() => {
                                                             document.getElementById('gs4').click();
+                                                            document.getElementById('gs4').classList.add("active");
 
                                                             setTimeout(() => {
                                                                 document.getElementById('b4').click();
+                                                                document.getElementById('b4').classList.add("active");
 
                                                                 setTimeout(() => {
                                                                     document.getElementById('c5').click();
+                                                                    document.getElementById('c5').classList.add("active");
 
                                                                     setTimeout(() => {
                                                                         document.getElementById('e4').click();
+                                                                        document.getElementById('e4').classList.add("active");
 
                                                                         setTimeout(() => {
                                                                             document.getElementById('e5').click();
+                                                                            document.getElementById('e5').classList.add("active");
 
                                                                             setTimeout(() => {
                                                                                 document.getElementById('ds5').click();
+                                                                                document.getElementById('ds5').classList.add("active");
 
                                                                                 setTimeout(() => {
                                                                                     document.getElementById('e5').click();
+                                                                                    document.getElementById('e5').classList.add("active");
 
                                                                                     setTimeout(() => {
                                                                                         document.getElementById('ds5').click();
+                                                                                        document.getElementById('ds5').classList.add("active");
 
                                                                                         setTimeout(() => {
                                                                                             document.getElementById('e5').click();
+                                                                                            document.getElementById('e5').classList.add("active");
 
                                                                                             setTimeout(() => {
                                                                                                 document.getElementById('b4').click();
+                                                                                                document.getElementById('b4').classList.add("active");
 
                                                                                                 setTimeout(() => {
                                                                                                     document.getElementById('d5').click();
+                                                                                                    document.getElementById('d5').classList.add("active");
 
                                                                                                     setTimeout(() => {
                                                                                                         document.getElementById('c5').click();
+                                                                                                        document.getElementById('c5').classList.add("active");
 
                                                                                                         setTimeout(() => {
                                                                                                             document.getElementById('a4').click();
+                                                                                                            document.getElementById('a4').classList.add("active");
 
                                                                                                             setTimeout(() => {
                                                                                                                 document.getElementById('c4').click();
+                                                                                                                document.getElementById('c4').classList.add("active");
 
                                                                                                                 setTimeout(() => {
                                                                                                                     document.getElementById('e4').click();
+                                                                                                                    document.getElementById('e4').classList.add("active");
 
                                                                                                                     setTimeout(() => {
                                                                                                                         document.getElementById('a4').click();
+                                                                                                                        document.getElementById('a4').classList.add("active");
 
                                                                                                                         setTimeout(() => {
                                                                                                                             document.getElementById('b4').click();
+                                                                                                                            document.getElementById('b4').classList.add("active");
 
                                                                                                                             setTimeout(() => {
                                                                                                                                 document.getElementById('e4').click();
+                                                                                                                                document.getElementById('e4').classList.add("active");
 
                                                                                                                                 setTimeout(() => {
                                                                                                                                     document.getElementById('c5').click();
+                                                                                                                                    document.getElementById('c5').classList.add("active");
 
                                                                                                                                     setTimeout(() => {
                                                                                                                                         document.getElementById('b4').click();
+                                                                                                                                        document.getElementById('b4').classList.add("active");
 
                                                                                                                                         setTimeout(() => {
                                                                                                                                             document.getElementById('a4').click();
+                                                                                                                                            document.getElementById('a4').classList.add("active");
 
                                                                                                                                             setTimeout(() => {
                                                                                                                                                 document.getElementById('b4').click();
+                                                                                                                                                document.getElementById('b4').classList.add("active");
 
                                                                                                                                                 setTimeout(() => {
                                                                                                                                                     document.getElementById('c5').click();
+                                                                                                                                                    document.getElementById('c5').classList.add("active");
 
                                                                                                                                                     setTimeout(() => {
                                                                                                                                                         document.getElementById('d5').click();
+                                                                                                                                                        document.getElementById('d5').classList.add("active");
 
                                                                                                                                                         setTimeout(() => {
                                                                                                                                                             document.getElementById('e5').click();
+                                                                                                                                                            document.getElementById('e5').classList.add("active");
 
                                                                                                                                                             setTimeout(() => {
                                                                                                                                                                 document.getElementById('g4').click();
+                                                                                                                                                                document.getElementById('g4').classList.add("active");
 
                                                                                                                                                                 setTimeout(() => {
                                                                                                                                                                     document.getElementById('f5').click();
+                                                                                                                                                                    document.getElementById('f5').classList.add("active");
 
                                                                                                                                                                     setTimeout(() => {
                                                                                                                                                                         document.getElementById('e5').click();
+                                                                                                                                                                        document.getElementById('e5').classList.add("active");
 
                                                                                                                                                                         setTimeout(() => {
                                                                                                                                                                             document.getElementById('d5').click();
+                                                                                                                                                                            document.getElementById('d5').classList.add("active");
 
                                                                                                                                                                             setTimeout(() => {
                                                                                                                                                                                 document.getElementById('f4').click();
+                                                                                                                                                                                document.getElementById('f4').classList.add("active");
 
                                                                                                                                                                                 setTimeout(() => {
                                                                                                                                                                                     document.getElementById('e5').click();
+                                                                                                                                                                                    document.getElementById('e5').classList.add("active");
 
                                                                                                                                                                                     setTimeout(() => {
                                                                                                                                                                                         document.getElementById('d5').click();
+                                                                                                                                                                                        document.getElementById('d5').classList.add("active");
 
                                                                                                                                                                                         setTimeout(() => {
                                                                                                                                                                                             document.getElementById('c5').click();
+                                                                                                                                                                                            document.getElementById('c5').classList.add("active");
 
                                                                                                                                                                                             setTimeout(() => {
                                                                                                                                                                                                 document.getElementById('e4').click();
+                                                                                                                                                                                                document.getElementById('e4').classList.add("active");
 
                                                                                                                                                                                                 setTimeout(() => {
                                                                                                                                                                                                     document.getElementById('d5').click();
+                                                                                                                                                                                                    document.getElementById('d5').classList.add("active");
 
                                                                                                                                                                                                     setTimeout(() => {
                                                                                                                                                                                                         document.getElementById('c5').click();
+                                                                                                                                                                                                        document.getElementById('c5').classList.add("active");
 
                                                                                                                                                                                                         setTimeout(() => {
                                                                                                                                                                                                             document.getElementById('b4').click();
+                                                                                                                                                                                                            document.getElementById('b4').classList.add("active");
 
                                                                                                                                                                                                             setTimeout(() => {
                                                                                                                                                                                                                 document.getElementById('e5').click();
+                                                                                                                                                                                                                document.getElementById('e5').classList.add("active");
 
                                                                                                                                                                                                                 setTimeout(() => {
                                                                                                                                                                                                                     document.getElementById('ds5').click();
+                                                                                                                                                                                                                    document.getElementById('ds5').classList.add("active");
 
                                                                                                                                                                                                                     setTimeout(() => {
                                                                                                                                                                                                                         document.getElementById('e5').click();
+                                                                                                                                                                                                                        document.getElementById('e5').classList.add("active");
 
                                                                                                                                                                                                                         setTimeout(() => {
                                                                                                                                                                                                                             document.getElementById('ds5').click();
+                                                                                                                                                                                                                            document.getElementById('ds5').classList.add("active");
 
                                                                                                                                                                                                                             setTimeout(() => {
                                                                                                                                                                                                                                 document.getElementById('e5').click();
+                                                                                                                                                                                                                                document.getElementById('e5').classList.add("active");
 
                                                                                                                                                                                                                                 setTimeout(() => {
                                                                                                                                                                                                                                     document.getElementById('b4').click();
+                                                                                                                                                                                                                                    document.getElementById('b4').classList.add("active");
 
                                                                                                                                                                                                                                     setTimeout(() => {
                                                                                                                                                                                                                                         document.getElementById('d5').click();
+                                                                                                                                                                                                                                        document.getElementById('d5').classList.add("active");
 
                                                                                                                                                                                                                                         setTimeout(() => {
                                                                                                                                                                                                                                             document.getElementById('c5').click();
+                                                                                                                                                                                                                                            document.getElementById('c5').classList.add("active");
 
                                                                                                                                                                                                                                             setTimeout(() => {
                                                                                                                                                                                                                                                 document.getElementById('a4').click();
+                                                                                                                                                                                                                                                document.getElementById('a4').classList.add("active");
 
                                                                                                                                                                                                                                                 setTimeout(() => {
                                                                                                                                                                                                                                                     document.getElementById('c4').click();
+                                                                                                                                                                                                                                                    document.getElementById('c4').classList.add("active");
 
                                                                                                                                                                                                                                                     setTimeout(() => {
                                                                                                                                                                                                                                                         document.getElementById('e4').click();
+                                                                                                                                                                                                                                                        document.getElementById('e4').classList.add("active");
 
                                                                                                                                                                                                                                                         setTimeout(() => {
                                                                                                                                                                                                                                                             document.getElementById('a4').click();
+                                                                                                                                                                                                                                                            document.getElementById('a4').classList.add("active");
 
                                                                                                                                                                                                                                                             setTimeout(() => {
                                                                                                                                                                                                                                                                 document.getElementById('b4').click();
+                                                                                                                                                                                                                                                                document.getElementById('b4').classList.add("active");
 
                                                                                                                                                                                                                                                                 setTimeout(() => {
                                                                                                                                                                                                                                                                     document.getElementById('e4').click();
+                                                                                                                                                                                                                                                                    document.getElementById('e4').classList.add("active");
 
                                                                                                                                                                                                                                                                     setTimeout(() => {
                                                                                                                                                                                                                                                                         document.getElementById('gs4').click();
+                                                                                                                                                                                                                                                                        document.getElementById('gs4').classList.add("active");
 
                                                                                                                                                                                                                                                                         setTimeout(() => {
                                                                                                                                                                                                                                                                             document.getElementById('b4').click();
+                                                                                                                                                                                                                                                                            document.getElementById('b4').classList.add("active");
 
                                                                                                                                                                                                                                                                             setTimeout(() => {
                                                                                                                                                                                                                                                                                 document.getElementById('c5').click();
+                                                                                                                                                                                                                                                                                document.getElementById('c5').classList.add("active");
 
                                                                                                                                                                                                                                                                                 setTimeout(() => {
                                                                                                                                                                                                                                                                                     document.getElementById('e4').click();
+                                                                                                                                                                                                                                                                                    document.getElementById('e4').classList.add("active");
 
                                                                                                                                                                                                                                                                                     setTimeout(() => {
                                                                                                                                                                                                                                                                                         document.getElementById('e5').click();
+                                                                                                                                                                                                                                                                                        document.getElementById('e5').classList.add("active");
 
                                                                                                                                                                                                                                                                                         setTimeout(() => {
                                                                                                                                                                                                                                                                                             document.getElementById('ds5').click();
+                                                                                                                                                                                                                                                                                            document.getElementById('ds5').classList.add("active");
 
                                                                                                                                                                                                                                                                                             setTimeout(() => {
                                                                                                                                                                                                                                                                                                 document.getElementById('e5').click();
+                                                                                                                                                                                                                                                                                                document.getElementById('e5').classList.add("active");
 
                                                                                                                                                                                                                                                                                                 setTimeout(() => {
                                                                                                                                                                                                                                                                                                     document.getElementById('ds5').click();
+                                                                                                                                                                                                                                                                                                    document.getElementById('ds5').classList.add("active");
 
                                                                                                                                                                                                                                                                                                     setTimeout(() => {
                                                                                                                                                                                                                                                                                                         document.getElementById('e5').click();
+                                                                                                                                                                                                                                                                                                        document.getElementById('e5').classList.add("active");
 
                                                                                                                                                                                                                                                                                                         setTimeout(() => {
                                                                                                                                                                                                                                                                                                             document.getElementById('b4').click();
+                                                                                                                                                                                                                                                                                                            document.getElementById('b4').classList.add("active");
 
                                                                                                                                                                                                                                                                                                             setTimeout(() => {
                                                                                                                                                                                                                                                                                                                 document.getElementById('d5').click();
+                                                                                                                                                                                                                                                                                                                document.getElementById('d5').classList.add("active");
 
                                                                                                                                                                                                                                                                                                                 setTimeout(() => {
                                                                                                                                                                                                                                                                                                                     document.getElementById('c5').click();
+                                                                                                                                                                                                                                                                                                                    document.getElementById('c5').classList.add("active");
 
                                                                                                                                                                                                                                                                                                                     setTimeout(() => {
                                                                                                                                                                                                                                                                                                                         document.getElementById('a4').click();
+                                                                                                                                                                                                                                                                                                                        document.getElementById('a4').classList.add("active");
 
                                                                                                                                                                                                                                                                                                                         setTimeout(() => {
                                                                                                                                                                                                                                                                                                                             document.getElementById('c4').click();
+                                                                                                                                                                                                                                                                                                                            document.getElementById('c4').classList.add("active");
 
                                                                                                                                                                                                                                                                                                                             setTimeout(() => {
                                                                                                                                                                                                                                                                                                                                 document.getElementById('e4').click();
+                                                                                                                                                                                                                                                                                                                                document.getElementById('e4').classList.add("active");
 
                                                                                                                                                                                                                                                                                                                                 setTimeout(() => {
                                                                                                                                                                                                                                                                                                                                     document.getElementById('a4').click();
+                                                                                                                                                                                                                                                                                                                                    document.getElementById('a4').classList.add("active");
 
                                                                                                                                                                                                                                                                                                                                     setTimeout(() => {
                                                                                                                                                                                                                                                                                                                                         document.getElementById('b4').click();
+                                                                                                                                                                                                                                                                                                                                        document.getElementById('b4').classList.add("active");
 
                                                                                                                                                                                                                                                                                                                                         setTimeout(() => {
                                                                                                                                                                                                                                                                                                                                             document.getElementById('e4').click();
+                                                                                                                                                                                                                                                                                                                                            document.getElementById('e4').classList.add("active");
 
                                                                                                                                                                                                                                                                                                                                             setTimeout(() => {
                                                                                                                                                                                                                                                                                                                                                 document.getElementById('c5').click();
+                                                                                                                                                                                                                                                                                                                                                document.getElementById('c5').classList.add("active");
 
                                                                                                                                                                                                                                                                                                                                                 setTimeout(() => {
                                                                                                                                                                                                                                                                                                                                                     document.getElementById('b4').click();
+                                                                                                                                                                                                                                                                                                                                                    document.getElementById('b4').classList.add("active");
 
                                                                                                                                                                                                                                                                                                                                                     setTimeout(() => {
                                                                                                                                                                                                                                                                                                                                                         document.getElementById('a4').click();
+                                                                                                                                                                                                                                                                                                                                                        document.getElementById('a4').classList.add("active");
                                                                                                                                                                                                                                                                                                                                                     }, tempo/2);
                                                                                                                                                                                                                                                                                                                                                 }, tempo/2);
                                                                                                                                                                                                                                                                                                                                             }, tempo/2);
