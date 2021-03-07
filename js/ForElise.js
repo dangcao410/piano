@@ -1,4 +1,4 @@
-document.getElementById('test').addEventListener('click', (event) => {
+document.getElementById('play').addEventListener('click', (event) => {
     const tempo = 500;
     document.getElementById('e5').click();
 

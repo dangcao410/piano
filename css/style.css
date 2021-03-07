@@ -7,7 +7,6 @@ body {
     background:#222;
 }
 
-
 ul {
     height:18.875em;
     width:78em;
@@ -91,4 +90,15 @@ ul li:first-child {
 
 ul li:last-child {
     border-radius:0 5px 5px 5px;
+}
+
+.list {
+    margin: 0px 50px;
+    color: white;
+    font-size: 200%;
+}
+
+.list button {
+    font-size: 100%;
+    cursor: pointer;
 }
