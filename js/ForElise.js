@@ -1,522 +1,331 @@
-document.getElementById('play').addEventListener('click', (event) => {
-    const tempo = 500;
-    document.getElementById('e5').click();
+const tempo = 500;
 
+document.getElementById('play').addEventListener('click', async (event) => {
+    const Queue = function(arr){
+        let index = 0;
+        let next = function(){
+            if (index >= arr.length) {return;}
+            arr[index++](next);
+        };
+        return next;
+    };
+
+    Queue([
+        e5Eighth,
+        ds5Eighth,
+        e5Eighth,
+        ds5Eighth,
+        e5Eighth,
+        b4Eighth,
+        d5Eighth,
+        c5Eighth,
+        a4Quarter,
+
+        eighthRest,
+
+        c4Eighth,
+        e4Eighth,
+        a4Eighth,
+        b4Quarter,
+
+        eighthRest,
+
+        e4Eighth,
+        gs4Eighth,
+        b4Eighth,
+        c5Quarter,
+
+        eighthRest,
+
+        e4Eighth,
+        e5Eighth,
+        ds5Eighth,
+        e5Eighth,
+        ds5Eighth,
+        e5Eighth,
+        b4Eighth,
+        d5Eighth,
+        c5Eighth,
+        a4Quarter,
+
+        eighthRest,
+
+        c4Eighth,
+        e4Eighth,
+        a4Eighth,
+        b4Quarter,
+
+        eighthRest,
+
+        e4Eighth,
+        c5Eighth,
+        b4Eighth,
+        a4Quarter,
+
+        eighthRest,
+
+        b4Eighth,
+        c5Eighth,
+        d5Eighth,
+        e5Quarter,
+
+        eighthRest,
+
+        g4Eighth,
+        f5Eighth,
+        e5Eighth,
+        d5Quarter,
+
+        eighthRest,
+
+        f4Eighth,
+        e5Eighth,
+        d5Eighth,
+        c5Quarter,
+
+        eighthRest,
+
+        e4Eighth,
+        d5Eighth,
+        c5Eighth,
+        b4QuarterDotted,
+
+        eighthRest,
+
+        e5Eighth,
+        ds5Eighth,
+        e5Eighth,
+        ds5Eighth,
+        e5Eighth,
+        b4Eighth,
+        d5Eighth,
+        c5Eighth,
+        a4Quarter,
+
+        eighthRest,
+
+        c4Eighth,
+        e4Eighth,
+        a4Eighth,
+        b4Quarter,
+
+        eighthRest,
+
+        e4Eighth,
+        gs4Eighth,
+        b4Eighth,
+        c5Quarter,
+
+        eighthRest,
+
+        e4Eighth,
+        e5Eighth,
+        ds5Eighth,
+        e5Eighth,
+        ds5Eighth,
+        e5Eighth,
+        b4Eighth,
+        d5Eighth,
+        c5Eighth,
+        a4Quarter,
+
+        eighthRest,
+
+        c4Eighth,
+        e4Eighth,
+        a4Eighth,
+        b4Quarter,
+
+        eighthRest,
+
+        e4Eighth,
+        c5Eighth,
+        b4Eighth,
+        a4Half
+    ])();
+});
+
+//Nốt đen: Quarter note.
+//Nốt móc đơn: Eighth note.
+//Nốt trắng: Half note.
+//Dấu chấm dôi: Dotted note.
+//Dấu lặng: Rest.
+
+function e5Eighth(next) {
+    document.getElementById('e5').click();
+    document.getElementById('e5').classList.add('active');
     setTimeout(() => {
         document.getElementById('e5').classList.remove('active');
-        document.getElementById('ds5').click();
-        document.getElementById('ds5').classList.add('active');
-
-        setTimeout(() => {
-            document.getElementById('ds5').classList.remove('active');
-            document.getElementById('e5').click();
-            document.getElementById('e5').classList.add('active');
-
-            setTimeout(() => {
-                document.getElementById('e5').classList.remove('active');
-                document.getElementById('ds5').click();
-                document.getElementById('ds5').classList.add('active');
-
-                setTimeout(() => {
-                    document.getElementById('ds5').classList.remove('active');
-                    document.getElementById('e5').click();
-                    document.getElementById('e5').classList.add('active');
-
-                    setTimeout(() => {
-                        document.getElementById('e5').classList.remove('active');
-                        document.getElementById('b4').click();
-                        document.getElementById('b4').classList.add('active');
-
-                        setTimeout(() => {
-                            document.getElementById('b4').classList.remove('active');
-                            document.getElementById('d5').click();
-                            document.getElementById('d5').classList.add('active');
-
-                            setTimeout(() => {
-                                document.getElementById('d5').classList.remove('active');
-                                document.getElementById('c5').click();
-                                document.getElementById('c5').classList.add('active');
-
-                                setTimeout(() => {
-                                    document.getElementById('c5').classList.remove('active');
-                                    document.getElementById('a4').click();
-                                    document.getElementById('a4').classList.add('active');
-
-                                    setTimeout(() => {
-                                        document.getElementById('a4').classList.remove('active');
-                                        document.getElementById('c4').click();
-                                        document.getElementById('c4').classList.add('active');
-
-                                        setTimeout(() => {
-                                            document.getElementById('c4').classList.remove('active');
-                                            document.getElementById('e4').click();
-                                            document.getElementById('e4').classList.add('active');
-
-                                            setTimeout(() => {
-                                                document.getElementById('e4').classList.remove('active');
-                                                document.getElementById('a4').click();
-                                                document.getElementById('a4').classList.add('active');
-
-                                                setTimeout(() => {
-                                                    document.getElementById('a4').classList.remove('active');
-                                                    document.getElementById('b4').click();
-                                                    document.getElementById('b4').classList.add('active');
-
-                                                    setTimeout(() => {
-                                                        document.getElementById('b4').classList.remove('active');
-                                                        document.getElementById('e4').click();
-                                                        document.getElementById('e4').classList.add('active');
-
-                                                        setTimeout(() => {
-                                                            document.getElementById('e4').classList.remove('active');
-                                                            document.getElementById('gs4').click();
-                                                            document.getElementById('gs4').classList.add('active');
-
-                                                            setTimeout(() => {
-                                                                document.getElementById('gs4').classList.remove('active');
-                                                                document.getElementById('b4').click();
-                                                                document.getElementById('b4').classList.add('active');
-
-                                                                setTimeout(() => {
-                                                                    document.getElementById('b4').classList.remove('active');
-                                                                    document.getElementById('c5').click();
-                                                                    document.getElementById('c5').classList.add('active');
-
-                                                                    setTimeout(() => {
-                                                                        document.getElementById('c5').classList.remove('active');
-                                                                        document.getElementById('e4').click();
-                                                                        document.getElementById('e4').classList.add('active');
-
-                                                                        setTimeout(() => {
-                                                                            document.getElementById('e4').classList.remove('active');
-                                                                            document.getElementById('e5').click();
-                                                                            document.getElementById('e5').classList.add('active');
-
-                                                                            setTimeout(() => {
-                                                                                document.getElementById('e5').classList.remove('active');
-                                                                                document.getElementById('ds5').click();
-                                                                                document.getElementById('ds5').classList.add('active');
-
-                                                                                setTimeout(() => {
-                                                                                    document.getElementById('ds5').classList.remove('active');
-                                                                                    document.getElementById('e5').click();
-                                                                                    document.getElementById('e5').classList.add('active');
-
-                                                                                    setTimeout(() => {
-                                                                                        document.getElementById('e5').classList.remove('active');
-                                                                                        document.getElementById('ds5').click();
-                                                                                        document.getElementById('ds5').classList.add('active');
-
-                                                                                        setTimeout(() => {
-                                                                                            document.getElementById('ds5').classList.remove('active');
-                                                                                            document.getElementById('e5').click();
-                                                                                            document.getElementById('e5').classList.add('active');
-
-                                                                                            setTimeout(() => {
-                                                                                                document.getElementById('e5').classList.remove('active');
-                                                                                                document.getElementById('b4').click();
-                                                                                                document.getElementById('b4').classList.add('active');
-
-                                                                                                setTimeout(() => {
-                                                                                                    document.getElementById('b4').classList.remove('active');
-                                                                                                    document.getElementById('d5').click();
-                                                                                                    document.getElementById('d5').classList.add('active');
-
-                                                                                                    setTimeout(() => {
-                                                                                                        document.getElementById('d5').classList.remove('active');
-                                                                                                        document.getElementById('c5').click();
-                                                                                                        document.getElementById('c5').classList.add('active');
-
-                                                                                                        setTimeout(() => {
-                                                                                                            document.getElementById('c5').classList.remove('active');
-                                                                                                            document.getElementById('a4').click();
-                                                                                                            document.getElementById('a4').classList.add('active');
-
-                                                                                                            setTimeout(() => {
-                                                                                                                document.getElementById('a4').classList.remove('active');
-                                                                                                                document.getElementById('c4').click();
-                                                                                                                document.getElementById('c4').classList.add('active');
-
-                                                                                                                setTimeout(() => {
-                                                                                                                    document.getElementById('c4').classList.remove('active');
-                                                                                                                    document.getElementById('e4').click();
-                                                                                                                    document.getElementById('e4').classList.add('active');
-
-                                                                                                                    setTimeout(() => {
-                                                                                                                        document.getElementById('e4').classList.remove('active');
-                                                                                                                        document.getElementById('a4').click();
-                                                                                                                        document.getElementById('a4').classList.add('active');
-
-                                                                                                                        setTimeout(() => {
-                                                                                                                            document.getElementById('a4').classList.remove('active');
-                                                                                                                            document.getElementById('b4').click();
-                                                                                                                            document.getElementById('b4').classList.add('active');
-
-                                                                                                                            setTimeout(() => {
-                                                                                                                                document.getElementById('b4').classList.remove('active');
-                                                                                                                                document.getElementById('e4').click();
-                                                                                                                                document.getElementById('e4').classList.add('active');
-
-                                                                                                                                setTimeout(() => {
-                                                                                                                                    document.getElementById('e4').classList.remove('active');
-                                                                                                                                    document.getElementById('c5').click();
-                                                                                                                                    document.getElementById('c5').classList.add('active');
-
-                                                                                                                                    setTimeout(() => {
-                                                                                                                                        document.getElementById('c5').classList.remove('active');
-                                                                                                                                        document.getElementById('b4').click();
-                                                                                                                                        document.getElementById('b4').classList.add('active');
-
-                                                                                                                                        setTimeout(() => {
-                                                                                                                                            document.getElementById('b4').classList.remove('active');
-                                                                                                                                            document.getElementById('a4').click();
-                                                                                                                                            document.getElementById('a4').classList.add('active');
-
-                                                                                                                                            setTimeout(() => {
-                                                                                                                                                document.getElementById('a4').classList.remove('active');
-                                                                                                                                                document.getElementById('b4').click();
-                                                                                                                                                document.getElementById('b4').classList.add('active');
-
-                                                                                                                                                setTimeout(() => {
-                                                                                                                                                    document.getElementById('b4').classList.remove('active');
-                                                                                                                                                    document.getElementById('c5').click();
-                                                                                                                                                    document.getElementById('c5').classList.add('active');
-
-                                                                                                                                                    setTimeout(() => {
-                                                                                                                                                        document.getElementById('c5').classList.remove('active');
-                                                                                                                                                        document.getElementById('d5').click();
-                                                                                                                                                        document.getElementById('d5').classList.add('active');
-
-                                                                                                                                                        setTimeout(() => {
-                                                                                                                                                            document.getElementById('d5').classList.remove('active');
-                                                                                                                                                            document.getElementById('e5').click();
-                                                                                                                                                            document.getElementById('e5').classList.add('active');
-
-                                                                                                                                                            setTimeout(() => {
-                                                                                                                                                                document.getElementById('e5').classList.remove('active');
-                                                                                                                                                                document.getElementById('g4').click();
-                                                                                                                                                                document.getElementById('g4').classList.add('active');
-
-                                                                                                                                                                setTimeout(() => {
-                                                                                                                                                                    document.getElementById('g4').classList.remove('active');
-                                                                                                                                                                    document.getElementById('f5').click();
-                                                                                                                                                                    document.getElementById('f5').classList.add('active');
-
-                                                                                                                                                                    setTimeout(() => {
-                                                                                                                                                                        document.getElementById('f5').classList.remove('active');
-                                                                                                                                                                        document.getElementById('e5').click();
-                                                                                                                                                                        document.getElementById('e5').classList.add('active');
-
-                                                                                                                                                                        setTimeout(() => {
-                                                                                                                                                                            document.getElementById('e5').classList.remove('active');
-                                                                                                                                                                            document.getElementById('d5').click();
-                                                                                                                                                                            document.getElementById('d5').classList.add('active');
-
-                                                                                                                                                                            setTimeout(() => {
-                                                                                                                                                                                document.getElementById('d5').classList.remove('active');
-                                                                                                                                                                                document.getElementById('f4').click();
-                                                                                                                                                                                document.getElementById('f4').classList.add('active');
-
-                                                                                                                                                                                setTimeout(() => {
-                                                                                                                                                                                    document.getElementById('f4').classList.remove('active');
-                                                                                                                                                                                    document.getElementById('e5').click();
-                                                                                                                                                                                    document.getElementById('e5').classList.add('active');
-
-                                                                                                                                                                                    setTimeout(() => {
-                                                                                                                                                                                        document.getElementById('e5').classList.remove('active');
-                                                                                                                                                                                        document.getElementById('d5').click();
-                                                                                                                                                                                        document.getElementById('d5').classList.add('active');
-
-                                                                                                                                                                                        setTimeout(() => {
-                                                                                                                                                                                            document.getElementById('d5').classList.remove('active');
-                                                                                                                                                                                            document.getElementById('c5').click();
-                                                                                                                                                                                            document.getElementById('c5').classList.add('active');
-
-                                                                                                                                                                                            setTimeout(() => {
-                                                                                                                                                                                                document.getElementById('c5').classList.remove('active');
-                                                                                                                                                                                                document.getElementById('e4').click();
-                                                                                                                                                                                                document.getElementById('e4').classList.add('active');
-
-                                                                                                                                                                                                setTimeout(() => {
-                                                                                                                                                                                                    document.getElementById('e4').classList.remove('active');
-                                                                                                                                                                                                    document.getElementById('d5').click();
-                                                                                                                                                                                                    document.getElementById('d5').classList.add('active');
-
-                                                                                                                                                                                                    setTimeout(() => {
-                                                                                                                                                                                                        document.getElementById('d5').classList.remove('active');
-                                                                                                                                                                                                        document.getElementById('c5').click();
-                                                                                                                                                                                                        document.getElementById('c5').classList.add('active');
-
-                                                                                                                                                                                                        setTimeout(() => {
-                                                                                                                                                                                                            document.getElementById('c5').classList.remove('active');
-                                                                                                                                                                                                            document.getElementById('b4').click();
-                                                                                                                                                                                                            document.getElementById('b4').classList.add('active');
-
-                                                                                                                                                                                                            setTimeout(() => {
-                                                                                                                                                                                                                document.getElementById('b4').classList.remove('active');
-                                                                                                                                                                                                                document.getElementById('e5').click();
-                                                                                                                                                                                                                document.getElementById('e5').classList.add('active');
-
-                                                                                                                                                                                                                setTimeout(() => {
-                                                                                                                                                                                                                    document.getElementById('e5').classList.remove('active');
-                                                                                                                                                                                                                    document.getElementById('ds5').click();
-                                                                                                                                                                                                                    document.getElementById('ds5').classList.add('active');
-
-                                                                                                                                                                                                                    setTimeout(() => {
-                                                                                                                                                                                                                        document.getElementById('ds5').classList.remove('active');
-                                                                                                                                                                                                                        document.getElementById('e5').click();
-                                                                                                                                                                                                                        document.getElementById('e5').classList.add('active');
-
-                                                                                                                                                                                                                        setTimeout(() => {
-                                                                                                                                                                                                                            document.getElementById('e5').classList.remove('active');
-                                                                                                                                                                                                                            document.getElementById('ds5').click();
-                                                                                                                                                                                                                            document.getElementById('ds5').classList.add('active');
-
-                                                                                                                                                                                                                            setTimeout(() => {
-                                                                                                                                                                                                                                document.getElementById('ds5').classList.remove('active');
-                                                                                                                                                                                                                                document.getElementById('e5').click();
-                                                                                                                                                                                                                                document.getElementById('e5').classList.add('active');
-
-                                                                                                                                                                                                                                setTimeout(() => {
-                                                                                                                                                                                                                                    document.getElementById('e5').classList.remove('active');
-                                                                                                                                                                                                                                    document.getElementById('b4').click();
-                                                                                                                                                                                                                                    document.getElementById('b4').classList.add('active');
-
-                                                                                                                                                                                                                                    setTimeout(() => {
-                                                                                                                                                                                                                                        document.getElementById('b4').classList.remove('active');
-                                                                                                                                                                                                                                        document.getElementById('d5').click();
-                                                                                                                                                                                                                                        document.getElementById('d5').classList.add('active');
-
-                                                                                                                                                                                                                                        setTimeout(() => {
-                                                                                                                                                                                                                                            document.getElementById('d5').classList.remove('active');
-                                                                                                                                                                                                                                            document.getElementById('c5').click();
-                                                                                                                                                                                                                                            document.getElementById('c5').classList.add('active');
-
-                                                                                                                                                                                                                                            setTimeout(() => {
-                                                                                                                                                                                                                                                document.getElementById('c5').classList.remove('active');
-                                                                                                                                                                                                                                                document.getElementById('a4').click();
-                                                                                                                                                                                                                                                document.getElementById('a4').classList.add('active');
-
-                                                                                                                                                                                                                                                setTimeout(() => {
-                                                                                                                                                                                                                                                    document.getElementById('a4').classList.remove('active');
-                                                                                                                                                                                                                                                    document.getElementById('c4').click();
-                                                                                                                                                                                                                                                    document.getElementById('c4').classList.add('active');
-
-                                                                                                                                                                                                                                                    setTimeout(() => {
-                                                                                                                                                                                                                                                        document.getElementById('c4').classList.remove('active');
-                                                                                                                                                                                                                                                        document.getElementById('e4').click();
-                                                                                                                                                                                                                                                        document.getElementById('e4').classList.add('active');
-
-                                                                                                                                                                                                                                                        setTimeout(() => {
-                                                                                                                                                                                                                                                            document.getElementById('e4').classList.remove('active');
-                                                                                                                                                                                                                                                            document.getElementById('a4').click();
-                                                                                                                                                                                                                                                            document.getElementById('a4').classList.add('active');
-
-                                                                                                                                                                                                                                                            setTimeout(() => {
-                                                                                                                                                                                                                                                                document.getElementById('a4').classList.remove('active');
-                                                                                                                                                                                                                                                                document.getElementById('b4').click();
-                                                                                                                                                                                                                                                                document.getElementById('b4').classList.add('active');
-
-                                                                                                                                                                                                                                                                setTimeout(() => {
-                                                                                                                                                                                                                                                                    document.getElementById('b4').classList.remove('active');
-                                                                                                                                                                                                                                                                    document.getElementById('e4').click();
-                                                                                                                                                                                                                                                                    document.getElementById('e4').classList.add('active');
-
-                                                                                                                                                                                                                                                                    setTimeout(() => {
-                                                                                                                                                                                                                                                                        document.getElementById('e4').classList.remove('active');
-                                                                                                                                                                                                                                                                        document.getElementById('gs4').click();
-                                                                                                                                                                                                                                                                        document.getElementById('gs4').classList.add('active');
-
-                                                                                                                                                                                                                                                                        setTimeout(() => {
-                                                                                                                                                                                                                                                                            document.getElementById('gs4').classList.remove('active');
-                                                                                                                                                                                                                                                                            document.getElementById('b4').click();
-                                                                                                                                                                                                                                                                            document.getElementById('b4').classList.add('active');
-
-                                                                                                                                                                                                                                                                            setTimeout(() => {
-                                                                                                                                                                                                                                                                                document.getElementById('b4').classList.remove('active');
-                                                                                                                                                                                                                                                                                document.getElementById('c5').click();
-                                                                                                                                                                                                                                                                                document.getElementById('c5').classList.add('active');
-
-                                                                                                                                                                                                                                                                                setTimeout(() => {
-                                                                                                                                                                                                                                                                                    document.getElementById('c5').classList.remove('active');
-                                                                                                                                                                                                                                                                                    document.getElementById('e4').click();
-                                                                                                                                                                                                                                                                                    document.getElementById('e4').classList.add('active');
-
-                                                                                                                                                                                                                                                                                    setTimeout(() => {
-                                                                                                                                                                                                                                                                                        document.getElementById('e4').classList.remove('active');
-                                                                                                                                                                                                                                                                                        document.getElementById('e5').click();
-                                                                                                                                                                                                                                                                                        document.getElementById('e5').classList.add('active');
-
-                                                                                                                                                                                                                                                                                        setTimeout(() => {
-                                                                                                                                                                                                                                                                                            document.getElementById('e5').classList.remove('active');
-                                                                                                                                                                                                                                                                                            document.getElementById('ds5').click();
-                                                                                                                                                                                                                                                                                            document.getElementById('ds5').classList.add('active');
-
-                                                                                                                                                                                                                                                                                            setTimeout(() => {
-                                                                                                                                                                                                                                                                                                document.getElementById('ds5').classList.remove('active');
-                                                                                                                                                                                                                                                                                                document.getElementById('e5').click();
-                                                                                                                                                                                                                                                                                                document.getElementById('e5').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                setTimeout(() => {
-                                                                                                                                                                                                                                                                                                    document.getElementById('e5').classList.remove('active');
-                                                                                                                                                                                                                                                                                                    document.getElementById('ds5').click();
-                                                                                                                                                                                                                                                                                                    document.getElementById('ds5').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                    setTimeout(() => {
-                                                                                                                                                                                                                                                                                                        document.getElementById('ds5').classList.remove('active');
-                                                                                                                                                                                                                                                                                                        document.getElementById('e5').click();
-                                                                                                                                                                                                                                                                                                        document.getElementById('e5').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                        setTimeout(() => {
-                                                                                                                                                                                                                                                                                                            document.getElementById('e5').classList.remove('active');
-                                                                                                                                                                                                                                                                                                            document.getElementById('b4').click();
-                                                                                                                                                                                                                                                                                                            document.getElementById('b4').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                            setTimeout(() => {
-                                                                                                                                                                                                                                                                                                                document.getElementById('b4').classList.remove('active');
-                                                                                                                                                                                                                                                                                                                document.getElementById('d5').click();
-                                                                                                                                                                                                                                                                                                                document.getElementById('d5').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                                setTimeout(() => {
-                                                                                                                                                                                                                                                                                                                    document.getElementById('d5').classList.remove('active');
-                                                                                                                                                                                                                                                                                                                    document.getElementById('c5').click();
-                                                                                                                                                                                                                                                                                                                    document.getElementById('c5').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                                    setTimeout(() => {
-                                                                                                                                                                                                                                                                                                                        document.getElementById('c5').classList.remove('active');
-                                                                                                                                                                                                                                                                                                                        document.getElementById('a4').click();
-                                                                                                                                                                                                                                                                                                                        document.getElementById('a4').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                                        setTimeout(() => {
-                                                                                                                                                                                                                                                                                                                            document.getElementById('a4').classList.remove('active');
-                                                                                                                                                                                                                                                                                                                            document.getElementById('c4').click();
-                                                                                                                                                                                                                                                                                                                            document.getElementById('c4').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                                            setTimeout(() => {
-                                                                                                                                                                                                                                                                                                                                document.getElementById('c4').classList.remove('active');
-                                                                                                                                                                                                                                                                                                                                document.getElementById('e4').click();
-                                                                                                                                                                                                                                                                                                                                document.getElementById('e4').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                                                setTimeout(() => {
-                                                                                                                                                                                                                                                                                                                                    document.getElementById('e4').classList.remove('active');
-                                                                                                                                                                                                                                                                                                                                    document.getElementById('a4').click();
-                                                                                                                                                                                                                                                                                                                                    document.getElementById('a4').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                                                    setTimeout(() => {
-                                                                                                                                                                                                                                                                                                                                        document.getElementById('a4').classList.remove('active');
-                                                                                                                                                                                                                                                                                                                                        document.getElementById('b4').click();
-                                                                                                                                                                                                                                                                                                                                        document.getElementById('b4').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                                                        setTimeout(() => {
-                                                                                                                                                                                                                                                                                                                                            document.getElementById('b4').classList.remove('active');
-                                                                                                                                                                                                                                                                                                                                            document.getElementById('e4').click();
-                                                                                                                                                                                                                                                                                                                                            document.getElementById('e4').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                                                            setTimeout(() => {
-                                                                                                                                                                                                                                                                                                                                                document.getElementById('e4').classList.remove('active');
-                                                                                                                                                                                                                                                                                                                                                document.getElementById('c5').click();
-                                                                                                                                                                                                                                                                                                                                                document.getElementById('c5').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                                                                setTimeout(() => {
-                                                                                                                                                                                                                                                                                                                                                    document.getElementById('c5').classList.remove('active');
-                                                                                                                                                                                                                                                                                                                                                    document.getElementById('b4').click();
-                                                                                                                                                                                                                                                                                                                                                    document.getElementById('b4').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                                                                    setTimeout(() => {
-                                                                                                                                                                                                                                                                                                                                                        document.getElementById('b4').classList.remove('active');
-                                                                                                                                                                                                                                                                                                                                                        document.getElementById('a4').click();
-                                                                                                                                                                                                                                                                                                                                                        document.getElementById('a4').classList.add('active');
-
-                                                                                                                                                                                                                                                                                                                                                        setTimeout(() => {
-                                                                                                                                                                                                                                                                                                                                                            document.getElementById('a4').classList.remove('active');
-                                                                                                                                                                                                                                                                                                                                                        }, tempo*2);
-                                                                                                                                                                                                                                                                                                                                                    }, tempo/2);
-                                                                                                                                                                                                                                                                                                                                                }, tempo/2);
-                                                                                                                                                                                                                                                                                                                                            }, tempo/2);
-                                                                                                                                                                                                                                                                                                                                        }, tempo + tempo/2);
-                                                                                                                                                                                                                                                                                                                                    }, tempo/2);
-                                                                                                                                                                                                                                                                                                                                }, tempo/2);
-                                                                                                                                                                                                                                                                                                                            }, tempo/2);
-                                                                                                                                                                                                                                                                                                                        }, tempo + tempo/2);
-                                                                                                                                                                                                                                                                                                                    }, tempo/2);
-                                                                                                                                                                                                                                                                                                                }, tempo/2);
-                                                                                                                                                                                                                                                                                                            }, tempo/2);
-                                                                                                                                                                                                                                                                                                        }, tempo/2);
-                                                                                                                                                                                                                                                                                                    }, tempo/2);
-                                                                                                                                                                                                                                                                                                }, tempo/2);
-                                                                                                                                                                                                                                                                                            }, tempo/2);
-                                                                                                                                                                                                                                                                                        }, tempo/2);
-                                                                                                                                                                                                                                                                                    }, tempo/2);
-                                                                                                                                                                                                                                                                                }, tempo + tempo/2);
-                                                                                                                                                                                                                                                                            }, tempo/2);
-                                                                                                                                                                                                                                                                        }, tempo/2);
-                                                                                                                                                                                                                                                                    }, tempo/2);
-                                                                                                                                                                                                                                                                }, tempo + tempo/2);
-                                                                                                                                                                                                                                                            }, tempo/2);
-                                                                                                                                                                                                                                                        }, tempo/2);
-                                                                                                                                                                                                                                                    }, tempo/2);
-                                                                                                                                                                                                                                                }, tempo + tempo/2);
-                                                                                                                                                                                                                                            }, tempo/2);
-                                                                                                                                                                                                                                        }, tempo/2);
-                                                                                                                                                                                                                                    }, tempo/2);
-                                                                                                                                                                                                                                }, tempo/2);
-                                                                                                                                                                                                                            }, tempo/2);
-                                                                                                                                                                                                                        }, tempo/2);
-                                                                                                                                                                                                                    }, tempo/2);
-                                                                                                                                                                                                                }, tempo/2);
-                                                                                                                                                                                                            }, tempo + tempo/2 + tempo/2);
-                                                                                                                                                                                                        }, tempo/2);
-                                                                                                                                                                                                    }, tempo/2);
-                                                                                                                                                                                                }, tempo/2);
-                                                                                                                                                                                            }, tempo + tempo/2);
-                                                                                                                                                                                        }, tempo/2);
-                                                                                                                                                                                    }, tempo/2);
-                                                                                                                                                                                }, tempo/2);
-                                                                                                                                                                            }, tempo + tempo/2);
-                                                                                                                                                                        }, tempo/2);
-                                                                                                                                                                    }, tempo/2);
-                                                                                                                                                                }, tempo/2);
-                                                                                                                                                            }, tempo + tempo/2);
-                                                                                                                                                        }, tempo/2);
-                                                                                                                                                    }, tempo/2);
-                                                                                                                                                }, tempo/2);
-                                                                                                                                            }, tempo + tempo/2);
-                                                                                                                                        }, tempo/2);
-                                                                                                                                    }, tempo/2);
-                                                                                                                                }, tempo/2);
-                                                                                                                            }, tempo + tempo/2);
-                                                                                                                        }, tempo/2);
-                                                                                                                    }, tempo/2);
-                                                                                                                }, tempo/2);
-                                                                                                            }, tempo + tempo/2);
-                                                                                                        }, tempo/2);
-                                                                                                    }, tempo/2);
-                                                                                                }, tempo/2);
-                                                                                            }, tempo/2);
-                                                                                        }, tempo/2);
-                                                                                    }, tempo/2);
-                                                                                }, tempo/2);
-                                                                            }, tempo/2);
-                                                                        }, tempo/2);
-                                                                    }, tempo + tempo/2);
-                                                                }, tempo/2);
-                                                            }, tempo/2);
-                                                        }, tempo/2);
-                                                    }, tempo + tempo/2);
-                                                }, tempo/2);
-                                            }, tempo/2);
-                                        }, tempo/2);
-                                    }, tempo + tempo/2);
-                                }, tempo/2);
-                            }, tempo/2);
-                        }, tempo/2);
-                    }, tempo/2);
-                }, tempo/2);
-            }, tempo/2);
-        }, tempo/2);
     }, tempo/2);
+    setTimeout(next, tempo/2);
+}
 
-});
+function ds5Eighth(next) {
+    document.getElementById('ds5').click();
+    document.getElementById('ds5').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('ds5').classList.remove('active');
+    }, tempo/2);
+    setTimeout(next, tempo/2);
+}
+
+function b4Eighth(next) {
+    document.getElementById('b4').click();
+    document.getElementById('b4').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('b4').classList.remove('active');
+    }, tempo/2);
+    setTimeout(next, tempo/2);
+}
+
+function d5Eighth(next) {
+    document.getElementById('d5').click();
+    document.getElementById('d5').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('d5').classList.remove('active');
+    }, tempo/2);
+    setTimeout(next, tempo/2);
+}
+
+function c5Eighth(next) {
+    document.getElementById('c5').click();
+    document.getElementById('c5').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('c5').classList.remove('active');
+    }, tempo/2);
+    setTimeout(next, tempo/2);
+}
+
+function a4Quarter(next) {
+    document.getElementById('a4').click();
+    document.getElementById('a4').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('a4').classList.remove('active');
+    }, tempo);
+    setTimeout(next, tempo);
+}
+
+function eighthRest(next) {
+    setTimeout(next, tempo/2);
+}
+
+function c4Eighth(next) {
+    document.getElementById('c4').click();
+    document.getElementById('c4').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('c4').classList.remove('active');
+    }, tempo/2);
+    setTimeout(next, tempo/2);
+}
+
+function e4Eighth(next) {
+    document.getElementById('e4').click();
+    document.getElementById('e4').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('e4').classList.remove('active');
+    }, tempo/2);
+    setTimeout(next, tempo/2);
+}
+
+function a4Eighth(next) {
+    document.getElementById('a4').click();
+    document.getElementById('a4').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('a4').classList.remove('active');
+    }, tempo/2);
+    setTimeout(next, tempo/2);
+}
+
+function b4QuarterDotted(next) {
+    document.getElementById('b4').click();
+    document.getElementById('b4').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('b4').classList.remove('active');
+    }, tempo + tempo/2);
+    setTimeout(next, tempo + tempo/2);
+}
+
+function b4Quarter(next) {
+    document.getElementById('b4').click();
+    document.getElementById('b4').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('b4').classList.remove('active');
+    }, tempo);
+    setTimeout(next, tempo);
+}
+
+function gs4Eighth(next) {
+    document.getElementById('gs4').click();
+    document.getElementById('gs4').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('gs4').classList.remove('active');
+    }, tempo/2);
+    setTimeout(next, tempo/2);
+}
+
+function c5Quarter(next) {
+    document.getElementById('c5').click();
+    document.getElementById('c5').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('c5').classList.remove('active');
+    }, tempo);
+    setTimeout(next, tempo);
+}
+
+function e5Quarter(next) {
+    document.getElementById('e5').click();
+    document.getElementById('e5').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('e5').classList.remove('active');
+    }, tempo);
+    setTimeout(next, tempo);
+}
+
+function g4Eighth(next) {
+    document.getElementById('g4').click();
+    document.getElementById('g4').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('g4').classList.remove('active');
+    }, tempo/2);
+    setTimeout(next, tempo/2);
+}
+
+function f5Eighth(next) {
+    document.getElementById('f5').click();
+    document.getElementById('f5').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('f5').classList.remove('active');
+    }, tempo/2);
+    setTimeout(next, tempo/2);
+}
+
+function d5Quarter(next) {
+    document.getElementById('d5').click();
+    document.getElementById('d5').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('d5').classList.remove('active');
+    }, tempo);
+    setTimeout(next, tempo);
+}
+
+function f4Eighth(next) {
+    document.getElementById('f4').click();
+    document.getElementById('f4').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('f4').classList.remove('active');
+    }, tempo/2);
+    setTimeout(next, tempo/2);
+}
+
+function a4Half(next) {
+    document.getElementById('a4').click();
+    document.getElementById('a4').classList.add('active');
+    setTimeout(() => {
+        document.getElementById('a4').classList.remove('active');
+    }, tempo*2);
+    setTimeout(next, tempo*2);
+}
+
 
 // E5 moc
 // DS5 moc
