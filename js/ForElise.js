@@ -1,184 +1,85 @@
-const tempo = 500;
-
 document.getElementById('play').addEventListener('click', async (event) => {
-    const Queue = (arr) => {
-        let index = 0;
-        let next = () => {
-            if (index >= arr.length) {return;}
-            arr[index++](next);
-        };
-        return next;
-    };
+    const tempo = 500;
+    const map = [
+        'Eighth-e5', 'Eighth-ds5', 'Eighth-e5', 'Eighth-ds5', 'Eighth-e5', 'Eighth-b4', 'Eighth-d5', 'Eighth-c5', 'Quarter-a4',
 
-    Queue([
-        e5Eighth, ds5Eighth, e5Eighth, ds5Eighth, e5Eighth, b4Eighth, d5Eighth, c5Eighth, a4Quarter,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-c4', 'Eighth-e4', 'Eighth-a4', 'Quarter-b4',
 
-        c4Eighth, e4Eighth, a4Eighth, b4Quarter,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-e4', 'Eighth-gs4', 'Eighth-b4', 'Quarter-c5',
 
-        e4Eighth, gs4Eighth, b4Eighth, c5Quarter,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-e4', 'Eighth-e5', 'Eighth-ds5', 'Eighth-e5', 'Eighth-ds5', 'Eighth-e5', 'Eighth-b4', 'Eighth-d5', 'Eighth-c5', 'Quarter-a4',
 
-        e4Eighth, e5Eighth, ds5Eighth, e5Eighth, ds5Eighth, e5Eighth, b4Eighth, d5Eighth, c5Eighth, a4Quarter,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-c4', 'Eighth-e4', 'Eighth-a4', 'Quarter-b4',
 
-        c4Eighth, e4Eighth, a4Eighth, b4Quarter,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-e4', 'Eighth-c5', 'Eighth-b4', 'Quarter-a4',
 
-        e4Eighth, c5Eighth, b4Eighth, a4Quarter,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-b4', 'Eighth-c5', 'Eighth-d5', 'Quarter-e5',
 
-        b4Eighth, c5Eighth, d5Eighth, e5Quarter,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-g4', 'Eighth-f5', 'Eighth-e5', 'Quarter-d5',
 
-        g4Eighth, f5Eighth, e5Eighth, d5Quarter,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-f4', 'Eighth-e5', 'Eighth-d5', 'Quarter-c5',
 
-        f4Eighth, e5Eighth, d5Eighth, c5Quarter,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-e4', 'Eighth-d5', 'Eighth-c5', 'QuarterDotted-b4',
 
-        e4Eighth, d5Eighth, c5Eighth, b4QuarterDotted,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-e5', 'Eighth-ds5', 'Eighth-e5', 'Eighth-ds5', 'Eighth-e5', 'Eighth-b4', 'Eighth-d5', 'Eighth-c5', 'Quarter-a4',
 
-        e5Eighth, ds5Eighth, e5Eighth, ds5Eighth, e5Eighth, b4Eighth, d5Eighth, c5Eighth, a4Quarter,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-c4', 'Eighth-e4', 'Eighth-a4', 'Quarter-b4',
 
-        c4Eighth, e4Eighth, a4Eighth, b4Quarter,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-e4', 'Eighth-gs4', 'Eighth-b4', 'Quarter-c5',
 
-        e4Eighth, gs4Eighth, b4Eighth, c5Quarter,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-e4', 'Eighth-e5', 'Eighth-ds5', 'Eighth-e5', 'Eighth-ds5', 'Eighth-e5', 'Eighth-b4', 'Eighth-d5', 'Eighth-c5', 'Quarter-a4',
 
-        e4Eighth, e5Eighth, ds5Eighth, e5Eighth, ds5Eighth, e5Eighth, b4Eighth, d5Eighth, c5Eighth, a4Quarter,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-c4', 'Eighth-e4', 'Eighth-a4', 'Quarter-b4',
 
-        c4Eighth, e4Eighth, a4Eighth, b4Quarter,
+        'EighthRest',
 
-        eighthRest,
+        'Eighth-e4', 'Eighth-c5', 'Eighth-b4', 'Half-a4'
+    ];
 
-        e4Eighth, c5Eighth, b4Eighth, a4Half
-    ])();
-});
+    let time;
+    for (let i = 0; i < map.length; i++) {
+        const note = map[i].split('-');
 
-//Nốt đen: Quarter note.
-//Nốt móc đơn: Eighth note.
-//Nốt trắng: Half note.
-//Dấu chấm dôi: Dotted note.
-//Dấu lặng: Rest.
+        if (note[0] == 'Eighth') time = tempo/2; //Nốt móc đơn: Eighth note.
+        if (note[0] == 'Quarter') time = tempo; //Nốt đen: Quarter note.
+        if (note[0] == 'Half') time = tempo*2; //Nốt trắng: Half note.
+        if (note[0] == 'EighthRest') time = tempo/2; //Dấu lặng: Rest.
+        if (note[0] == 'QuarterDotted') time = tempo + tempo/2; //Dấu chấm dôi: Dotted note.
 
-function e5Eighth(next) {
-    $('#e5').click().addClass('active').wait(tempo/2).removeClass('active');
-    setTimeout(next, tempo/2);
-}
-
-function ds5Eighth(next) {
-    $('#ds5').click().addClass('active').wait(tempo/2).removeClass('active');
-    setTimeout(next, tempo/2);
-}
-
-function b4Eighth(next) {
-    $('#b4').click().addClass('active').wait(tempo/2).removeClass('active');
-    setTimeout(next, tempo/2);
-}
-
-function d5Eighth(next) {
-    $('#d5').click().addClass('active').wait(tempo/2).removeClass('active');
-    setTimeout(next, tempo/2);
-}
-
-function c5Eighth(next) {
-    $('#c5').click().addClass('active').wait(tempo/2).removeClass('active');
-    setTimeout(next, tempo/2);
-}
-
-function a4Quarter(next) {
-    $('#a4').click().addClass('active').wait(tempo).removeClass('active');
-    setTimeout(next, tempo);
-}
-
-function eighthRest(next) {
-    setTimeout(next, tempo/2);
-}
-
-function c4Eighth(next) {
-    $('#c4').click().addClass('active').wait(tempo/2).removeClass('active');
-    setTimeout(next, tempo/2);
-}
-
-function e4Eighth(next) {
-    $('#e4').click().addClass('active').wait(tempo/2).removeClass('active');
-    setTimeout(next, tempo/2);
-}
-
-function a4Eighth(next) {
-    $('#a4').click().addClass('active').wait(tempo/2).removeClass('active');
-    setTimeout(next, tempo/2);
-}
-
-function b4QuarterDotted(next) {
-    $('#b4').click().addClass('active').wait(tempo + tempo/2).removeClass('active');
-    setTimeout(next, tempo + tempo/2);
-}
-
-function b4Quarter(next) {
-    $('#b4').click().addClass('active').wait(tempo).removeClass('active');
-    setTimeout(next, tempo);
-}
-
-function gs4Eighth(next) {
-    $('#gs4').click().addClass('active').wait(tempo/2).removeClass('active');
-    setTimeout(next, tempo/2);
-}
-
-function c5Quarter(next) {
-    $('#c5').click().addClass('active').wait(tempo).removeClass('active');
-    setTimeout(next, tempo);
-}
-
-function e5Quarter(next) {
-    $('#e5').click().addClass('active').wait(tempo).removeClass('active');
-    setTimeout(next, tempo);
-}
-
-function g4Eighth(next) {
-    $('#g4').click().addClass('active').wait(tempo/2).removeClass('active');
-    setTimeout(next, tempo/2);
-}
-
-function f5Eighth(next) {
-    $('#f5').click().addClass('active').wait(tempo/2).removeClass('active');
-    setTimeout(next, tempo/2);
-}
-
-function d5Quarter(next) {
-    $('#d5').click().addClass('active').wait(tempo).removeClass('active');
-    setTimeout(next, tempo);
-}
-
-function f4Eighth(next) {
-    $('#f4').click().addClass('active').wait(tempo/2).removeClass('active');
-    setTimeout(next, tempo/2);
-}
-
-function a4Half(next) {
-    $('#a4').click().addClass('active').wait(tempo*2).removeClass('active');
-    setTimeout(next, tempo*2);
-}
+        if (note[1]) {
+            $(`#${note[1]}`).click().addClass('active').wait(time).removeClass('active');
+        }
+        await new Promise(resolve => setTimeout(resolve, time));
+    }
+})
 
 
 // E5 moc
