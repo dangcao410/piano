@@ -75,7 +75,7 @@ document.getElementById('play').addEventListener('click', async (event) => {
         if (note[0] == 'QuarterDotted') time = tempo + tempo/2; //Dấu chấm dôi: Dotted note.
 
         if (note[1]) {
-            $(`#${note[1]}`).click().addClass('active').wait(time).removeClass('active');
+            $('#' + note[1]).click().addClass('active').wait(time).removeClass('active');
         }
         await new Promise(resolve => setTimeout(resolve, time));
     }
