@@ -68,11 +68,10 @@ document.getElementById('play').addEventListener('click', async (event) => {
     for (let i = 0; i < map.length; i++) {
         const note = map[i].split('-');
 
-        if (note[0] == 'Eighth') time = tempo/2; //Nốt móc đơn: Eighth note.
-        if (note[0] == 'Quarter') time = tempo; //Nốt đen: Quarter note.
-        if (note[0] == 'Half') time = tempo*2; //Nốt trắng: Half note.
-        if (note[0] == 'EighthRest') time = tempo/2; //Dấu lặng: Rest.
-        if (note[0] == 'QuarterDotted') time = tempo + tempo/2; //Dấu chấm dôi: Dotted note.
+        if (note[0] === ('Eighth' || 'EighthRest')) time = tempo/2; //Nốt móc đơn: Eighth note. //Dấu lặng: Rest.
+        if (note[0] === 'Quarter') time = tempo; //Nốt đen: Quarter note.
+        if (note[0] === 'Half') time = tempo*2; //Nốt trắng: Half note.
+        if (note[0] === 'QuarterDotted') time = tempo + tempo/2; //Dấu chấm dôi: Dotted note.
 
         if (note[1]) {
             $('#' + note[1]).click().addClass('active').wait(time).removeClass('active');
