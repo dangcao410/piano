@@ -16,7 +16,7 @@ ul {
     position:relative;
     border:1px solid #160801;
     border-radius:1em;
-    background:linear-gradient(to bottom right,rgba(0,0,0,0.3),rgba(0,0,0,0)),url(../img/vwood.png);
+    background:linear-gradient(to bottom right,rgba(0,0,0,0.3),rgba(0,0,0,0)),url("../img/vwood.png");
     box-shadow:0 0 50px rgba(0,0,0,0.5) inset,0 1px rgba(212,152,125,0.2) inset,0 5px 15px rgba(0,0,0,0.5);
 }
 
@@ -90,11 +90,11 @@ ul li:first-child {
 }
 
 ul li:last-child {
-    border-radius:0 5px 5px 5px;
+    border-radius: 0 5px 5px 5px;
 }
 
 .list {
-    margin: 0px 50px;
+    margin: 25% 50px 0;
     color: white;
     font-size: 200%;
 }
@@ -102,4 +102,132 @@ ul li:last-child {
 .list button {
     font-size: 100%;
     cursor: pointer;
+}
+
+.headphone {
+    position: relative;
+    margin-top: 15%;
+}
+
+.centered {
+    position: absolute;
+    margin: auto;
+    top:0; bottom:0; left:0; right:0;
+}
+
+.face {
+    width: 150px;
+    height: 150px;
+    background-color: #EBEBEB;
+    border-radius: 50%;
+    -webkit-mask: url(https://i.imgur.com/RlyofWb.png) top left / cover;
+    mask: url(https://i.imgur.com/RlyofWb.png) top left / cover;
+}
+
+.back {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: -webkit-linear-gradient(top, #FF694C 0%, #F15378 40%, #E053D5 50%, #B54BEB 60%, #5B86EE 70%, #00EEEB 100%);
+    background: linear-gradient(top, #FF694C 0%, #F15378 30%, #E053D5 40%, #B54BEB 60%, #5B86EE 70%, #00EEEB 100%);
+
+    -webkit-filter: saturate(0.5);
+    filter: saturate(0.5);
+    -webkit-transform: scale(1) rotate(-25deg);
+    transform: scale(1) rotate(-25deg);
+    -webkit-animation: spin 0.3s infinite linear alternate;
+    animation: spin 0.3s infinite linear alternate;
+}
+
+.headphones {
+    width: 320px;
+    height: 120px;
+    -webkit-animation: bounce 0.3s linear infinite alternate;
+    animation: bounce 0.3s linear infinite alternate;
+}
+
+.earmuff {
+    float: left;
+    width: 20px;
+    height: 120px;
+    background: #FA7B57;
+    border-radius: 50% 10px 10px 50%;
+    border-right: #FA8E57 solid 20px;
+
+}
+.earmuff:nth-child(2){
+    float: right;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.band {
+    width: 320px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: transparent;
+    border-top: #FA7B57 solid 40px;
+    z-index: -99;
+}
+
+.music {
+    width: 450px;
+    height: 50px;
+}
+.group1{
+    float: left;
+}
+.group2{
+    float: right;
+    -webkit-transform: rotate(180deg);
+}
+.wave {
+    display: inline-block;
+    width: 10px;
+    height: 50px;
+    opacity: 0.2;
+    background-color: #FA7B57;
+    -webkit-animation: wave 0.3s 0.2s linear infinite alternate;
+    animation: wave 0.3s 0.2s linear infinite alternate;
+}
+.wave:nth-child(2) {
+    -webkit-animation: wave 0.3s 0.1s linear infinite alternate;
+    animation: wave 0.3s 0.1s linear infinite alternate;
+}
+.wave:nth-child(3) {
+    -webkit-animation: wave 0.3s linear infinite alternate;
+    animation: wave 0.3s linear infinite alternate;
+}
+
+@keyframes spin {
+    to {
+        -webkit-filter: saturate(1);
+        -webkit-transform: scale(1.05) rotate(-25deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    to {
+        -webkit-filter: saturate(1);
+        -webkit-transform: scale(1.05) rotate(-25deg);
+    }
+}
+
+@keyframes bounce {
+    to {
+        -webkit-transform: scale(1.05);
+    }
+}
+
+@-webkit-keyframes bounce {
+    to {
+        -webkit-transform: scale(1.05);
+    }
+}
+
+@-webkit-keyframes wave {
+    to {
+        opacity: 1;
+        -webkit-transform: scaleY(2);
+    }
 }
